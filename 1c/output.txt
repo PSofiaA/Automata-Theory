@@ -1,0 +1,63 @@
+f = k(x);--> Correct!
+x = z( y );--> Correct!
+x = z(y) ;--> Correct!
+x = z ( y )   ;--> Correct!
+x = z(y,y);--> Correct!
+x = z(123,1,abc,x,z,5);--> Correct!
+--> Incorrect!
+--> Incorrect!
+g = k();g = k(); g = k(); g = k(); g = k(); g = k();--> Incorrect!
+--> Incorrect!
+--> Incorrect!
+--> Incorrect!
+--> Incorrect!
+--> Incorrect!
+--> Incorrect!
+this is string--> Incorrect!
+this is another string--> Incorrect!
+--> Incorrect!
+previous one was empty string--> Incorrect!
+2363847423 32432 342342344--> Incorrect!
+g = k();--> Correct!
+g = k(,23,2,2,,);--> Incorrect!
+--> Incorrect!
+--> Incorrect!
+--> Incorrect!
+--> Incorrect!
+i love cats--> Incorrect!
+--> Incorrect!
+--> Incorrect!
+hi--> Incorrect!
+--> Incorrect!
+--> Incorrect!
+--> Incorrect!
+g = k123(asd,sss1ssssssssssssssssssssssssssssssssssssssss);--> Incorrect!
+--> Incorrect!
+--> Incorrect!
+var1234AAAvA = f12(12,7717,dhsjd89dDA);--> Correct!
+funcFC123 =AaaA7(dsk,wwef,dslk2,98);--> Correct!
+g = k123(asd,asssssssssssssssssssssssssssssssssssssssssss);--> Incorrect!
+var1234AAAvA = f12(12,7717,dhsjd89dDA);--> Correct!
+funcFC123 =AaaA7(dsk,wwef,dslk2,98);--> Correct!
+--> Incorrect!
+funcFC1234 =AaaA7(ds98);--> Correct!
+funcFC123 = sdf543(2dsk,3wwef,dslk2,98s);--> Incorrect!
+funcFC123 = abc(dsk,wwfd23ef,,,,,,,dslk2,98s);--> Incorrect!
+funcFC123 = qwerty(2dsk,3wwef,9);--> Incorrect!
+funcFC123 = qwerty(,wwef,9);--> Incorrect!
+funcFC123 =AaaA7(dsk,wwef,dslk2,98s);--> Incorrect!
+funcFC1234 =AaaA7(ds98);--> Correct!
+--> Incorrect!
+--> Incorrect!
+funcFC123 = sdf543(2dsk,3wwef,dslk2,98s);--> Incorrect!
+funcFC123 = abc(dsk,wwfd23ef,,,,,,,dslk2,98s);--> Incorrect!
+funcFC123 = qwerty(2dsk,3wwef,9);--> Incorrect!
+funcFC123 = qwerty(,wwef,9);--> Incorrect!
+g = k();--> Correct!
+--> Incorrect!
+--> Incorrect!
+g = k();(a,a,s);--> Incorrect!
+f=k();--> Correct!
+f =           k(   x, x,x);--> Correct!
+abc--> Incorrect!
+function1234567891011121314 = name(a,a,123);--> Incorrect!

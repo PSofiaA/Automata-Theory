@@ -1,0 +1,29 @@
+f = k(x);--> Correct sample
+asl = dsl121(1221,sdkl)--> Inorrect sample
+g = k();--> Correct sample
+lda = dsl121();--> Correct sample
+this is string--> Inorrect sample
+this is another string--> Inorrect sample
+--> Inorrect sample
+previous one was empty string--> Inorrect sample
+2363847423 32432 342342344--> Inorrect sample
+g = k();--> Correct sample
+g = k(,23,2,2,,);--> Inorrect sample
+--> Inorrect sample
+--> Inorrect sample
+--> Inorrect sample
+--> Inorrect sample
+i love cats--> Inorrect sample
+--> Inorrect sample
+--> Inorrect sample
+hi--> Inorrect sample
+g = k(); g = k(); g = k(); g = k(); g = k(); g = k();--> Inorrect sample
+g = k123(asd,asssssssssssssssssssssssssssssssssssssssssss);--> Inorrect sample
+var1234AAAvA = f12(12,7717,dhsjd89dDA);--> Correct sample
+funcFC123 =AaaA7(dsk,wwef,dslk2,98);--> Correct sample
+funcFC123 =AaaA7(dsk,wwef,dslk2,98s);--> Inorrect sample
+funcFC1234 =AaaA7(ds98);--> Correct sample
+funcFC123 = sdf543(2dsk,3wwef,dslk2,98s);--> Inorrect sample
+funcFC123 = abc(dsk,wwfd23ef,,,,,,,dslk2,98s);--> Inorrect sample
+funcFC123 = qwerty(2dsk,3wwef,9);--> Inorrect sample
+funcFC123 = qwerty(,wwef,9);--> Inorrect sample

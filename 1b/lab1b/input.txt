@@ -1,0 +1,63 @@
+f = k(x)        ;
+x = z( y );        
+x = z(y) ;
+x = z ( y )   ;
+x = z(y,y);                   
+x = z(123,1,abc,x,z,5);    
+
+
+g = k(); g = k(); g = k(); g = k(); g = k(); g = k();
+
+
+
+
+
+
+this is string
+this is another string
+ 
+previous one was empty string
+2363847423 32432 342342344
+g = k();
+g = k(,23,2,2,,);
+
+ 
+
+
+i love cats
+
+
+hi
+
+
+
+g = k123(asd,sss1ssssssssssssssssssssssssssssssssssssssss);
+
+
+var1234AAAvA = f12(12,7717,dhsjd89dDA);
+funcFC123 =AaaA7(dsk,wwef,dslk2,98);
+g = k123(asd,asssssssssssssssssssssssssssssssssssssssssss);
+var1234AAAvA = f12(12,7717,dhsjd89dDA);
+funcFC123 =AaaA7(dsk,wwef,dslk2,98);
+
+funcFC1234 =AaaA7(ds98);
+funcFC123 = sdf543(2dsk,3wwef,dslk2,98s);
+funcFC123 = abc(dsk,wwfd23ef,,,,,,,dslk2,98s);
+funcFC123 = qwerty(2dsk,3wwef,9);
+funcFC123 = qwerty(,wwef,9);
+funcFC123 =AaaA7(dsk,wwef,dslk2,98s);
+funcFC1234 =AaaA7(ds98);
+
+
+funcFC123 = sdf543(2dsk,3wwef,dslk2,98s);
+funcFC123 = abc(dsk,wwfd23ef,,,,,,,dslk2,98s);
+funcFC123 = qwerty(2dsk,3wwef,9);
+funcFC123 = qwerty(,wwef,9);
+g = k();
+
+
+g = k();(a,a,s);
+f=k();
+f =           k(   x, x,x); 
+abc
+function1234567891011121314 = name(a,a,123);

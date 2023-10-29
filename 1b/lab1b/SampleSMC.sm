@@ -1,0 +1,101 @@
+%class SampleSMC
+%package lab1b
+%access package 
+
+%start SampleSMCMap::ReadName
+%map SampleSMCMap 
+%%
+ReadName
+{
+	letter(l: char)[ctxt.lenCheck()==true && ctxt.eqCheck()==true] 		ReadNext 	{lenClear(); funcWrite(l);}
+	letter(l: char) 													ReadNext 	{lenClear();}
+	space 																nil {}
+	Default																Error {notAcceptable();}
+}	
+//Transition guard - manual smc
+ReadNext
+{
+	letter(l: char) [ctxt.lenCheck()==true && ctxt.eqCheck()==true] 	nil {lenInc(); funcWrite(l);}
+	digit(d: char) 	[ctxt.lenCheck()==true && ctxt.eqCheck()==true] 	nil {lenInc(); funcWrite(d);}
+	letter(l: char) [ctxt.lenCheck()==true] 							nil {lenInc();}
+	digit(d: char) 	[ctxt.lenCheck()==true] 							nil {lenInc();}
+	equal			[ctxt.eqCheck()==false] 							ReadName {eqUpdate();}
+	space 																BlankName {}
+	openBracket 	[ctxt.eqCheck()==true && ctxt.lenCheck()==true] 	ReadParams {}
+	Default 															Error {notAcceptable();}
+}
+
+BlankName
+{
+	equal			[ctxt.eqCheck()==false && ctxt.lenCheck()==true] 	ReadName {eqUpdate();}
+	space 																nil {}
+	openBracket 	[ctxt.eqCheck()==true && ctxt.lenCheck()==true] 	ReadParams {}
+	Default 															Error {notAcceptable();}
+}
+
+ReadParams
+{
+	digit(d: char) 														DigitParam {lenClear();}
+	letter(l: char) 													LetterParam {lenClear();}
+	closeBracket 														Closing{}
+	space 																nil {}
+	Default 															Error {notAcceptable();}
+}
+
+DigitParam
+{
+	digit(d: char)	[ctxt.lenCheck()==true] 							nil {lenInc();}
+	closeBracket	[ctxt.lenCheck()==true] 							Closing{}
+	cm 				[ctxt.lenCheck()==true] 							Comma{}
+	space 																BlankParam {}
+	Default 															Error {notAcceptable();}
+}
+
+LetterParam
+{
+	digit(d: char)	[ctxt.lenCheck()==true] 							nil {lenInc();}
+	letter(l: char)	[ctxt.lenCheck()==true] 							nil {lenInc();}
+	closeBracket	[ctxt.lenCheck()==true] 							Closing{}
+	cm 				[ctxt.lenCheck()==true] 							Comma{}
+	space 																BlankParam {}
+	Default 															Error {notAcceptable();}
+}
+
+BlankParam
+{
+	closeBracket	[ctxt.lenCheck()==true] 							Closing{}
+	cm 																	Comma {} 
+	space 																nil {}
+	Default 															Error {notAcceptable();}
+}
+
+Comma
+{
+	digit(d: char)	[ctxt.lenCheck()==true] 							DigitParam {lenClear();}
+	letter(l: char)	[ctxt.lenCheck()==true] 							LetterParam {lenClear();}
+	space 																nil {}
+	Default																Error {notAcceptable();}
+}
+
+Closing
+{
+	oxford 																Fin {}
+	space 																nil {}
+	Default 															Error {notAcceptable();}
+}
+
+Fin //добавить отслеживание пробелов
+//лучше статистика по файлу 
+{	
+	newLine 															ReadName {isAcceptable();}				
+	space 																nil {}
+	Default 															Error {notAcceptable();}
+} 
+Error
+{	
+	reset 																ReadName {}
+	Default 															nil{}
+}
+%%
+
+
