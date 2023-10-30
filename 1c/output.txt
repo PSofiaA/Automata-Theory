@@ -9,7 +9,9 @@ x = z(123,1,abc,x,z,5);--> Correct!
 g = k();g = k(); g = k(); g = k(); g = k(); g = k();--> Incorrect!
 --> Incorrect!
 --> Incorrect!
---> Incorrect!
+123 = i();--> Incorrect!
+ooo=  7(jdkfd);   --> Incorrect!
+abc =         dksl(dh,d,s,s,s,s,s,1,343,5,asdjk,23,sa);--> Correct!
 --> Incorrect!
 --> Incorrect!
 --> Incorrect!

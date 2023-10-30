@@ -9,10 +9,6 @@ x = z(123,1,abc,x,z,5);
 g = k(); g = k(); g = k(); g = k(); g = k(); g = k();
 
 
-
-
-
-
 this is string
 this is another string
  
