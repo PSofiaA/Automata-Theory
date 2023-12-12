@@ -101,5 +101,5 @@ public class PolishNotation {
 		Integer priority = operationPriority.get(toEstimate);
 		return priority == null ? 5 : priority;
 	}
-}
-*/
+}*/
+

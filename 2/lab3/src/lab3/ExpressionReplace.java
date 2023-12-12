@@ -23,11 +23,12 @@ public class ExpressionReplace {
     
 	public ExpressionReplace(String expression) {
 		this.expression = expression;
-		replaceRange();
+		replaceRange(); // this is very bad
 		replaceRepetitionOperator();
 		replaceKleenePlus();
 		replacePrognosticOperator();
-		replaceConcatenation(); // LAST ONE CALLED - NOTE OPTIMISE 
+		replaceConcatenation(); // !!! LAST ONE CALLED - NOTE - NEED OPTIMISATION 
+		System.out.println("Replaced  " + this.expression);
 		turnPolishNotation();
 	}
 
@@ -160,4 +161,49 @@ public class ExpressionReplace {
 		Integer priority = operationPriority.get(toEstimate);
 		return priority == null ? 5 : priority;
 	}
+	
+	public String infixToPostfix(String regex) {
+        String postfix = new String();
+
+        Stack<Character> stack = new Stack<Character>();
+
+        String formattedRegEx = regex;
+
+        for (Character c : formattedRegEx.toCharArray()) {
+            switch (c) {
+                case '(':
+                    stack.push(c);
+                    break;
+
+                case ')':
+                    while (!stack.peek().equals('(')) {
+                        postfix += stack.pop();
+                    }
+                    stack.pop();
+                    break;
+
+                default:
+                    while (stack.size() > 0) {
+                        Character peekedChar = stack.peek();
+
+                        Integer peekedCharPrecedence = getPriority(peekedChar);
+                        Integer currentCharPrecedence = getPriority(c);
+
+                        if (peekedCharPrecedence >= currentCharPrecedence) {
+                            postfix += stack.pop();
+                        } else {
+                            break;
+                        }
+                    }
+                    stack.push(c);
+                    break;
+            }
+
+        }
+
+        while (stack.size() > 0)
+            postfix += stack.pop();
+
+        return postfix;
+    }
 }
